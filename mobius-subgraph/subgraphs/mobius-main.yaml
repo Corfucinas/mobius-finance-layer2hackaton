@@ -1,0 +1,98 @@
+specVersion: 0.0.2
+schema:
+  file: ./mobius-main.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: Mobius
+    network: mumbai
+    source:
+      address: ""
+      abi: Mobius
+      startBlock: 14505180
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Burned
+        - Claimed
+        - Liquidated
+        - ManagerChanged
+        - Minted
+        - OwnerChanged
+        - PauseChanged
+        - Shorted
+        - Staked
+        - Traded
+      abis:
+        - name: Mobius
+          file: ../abis/Mobius.json
+        - name: Issuer
+          file: ../abis/Issuer.json
+        - name: Staker
+          file: ../abis/Staker.json
+      eventHandlers:
+        - event: Burned(indexed address,indexed bytes32,indexed bytes32,uint256)
+          handler: handleBurned
+        - event: Claimed(indexed address,indexed bytes32,indexed address,bytes32,uint256)
+          handler: handleClaimed
+        - event: Liquidated(indexed address,indexed bytes32,indexed address,bytes32,uint256,uint256)
+          handler: handleLiquidated
+        - event: ManagerChanged(indexed address,indexed address)
+          handler: handleManagerChanged
+        - event: Minted(indexed address,indexed bytes32,uint256,uint256)
+          handler: handleMinted
+        - event: OwnerChanged(indexed address,indexed address)
+          handler: handleOwnerChanged
+        - event: PauseChanged(indexed bool,indexed bool)
+          handler: handlePauseChanged
+        - event: Shorted(indexed address,indexed bytes32,indexed bytes32,uint256,uint256)
+          handler: handleShorted
+        - event: Staked(indexed address,indexed bytes32,indexed bytes32,uint256)
+          handler: handleStaked
+        - event: Traded(indexed address,indexed bytes32,indexed bytes32,uint256,uint256,uint256,uint256,uint256)
+          handler: handleTraded
+      file: ../src/Mobius.ts
+  - kind: ethereum/contract
+    name: RewardTrading
+    network: mumbai
+    source:
+      address: ""
+      abi: RewardTrading
+      startBlock: 14505180
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Swap
+      abis:
+        - name: RewardTrading
+          file: ../abis/RewardTrading.json
+      eventHandlers:
+        - event: Swap(indexed address,indexed uint256,uint256)
+          handler: handleSwap
+      file: ../src/RewardTrading.ts
+  - kind: ethereum/contract
+    name: MobiusOracle
+    network: mumbai
+    source:
+      address: ""
+      abi: MobiusOracle
+      startBlock: 14505180
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - AssetPriceChanged
+      abis:
+        - name: MobiusOracle
+          file: ../abis/MobiusOracle.json
+        - name: IERC20
+          file: ../abis/IERC20.json
+      eventHandlers:
+        - event: AssetPriceChanged(indexed bytes32,indexed uint256,uint256,uint256)
+          handler: handleAssetPriceChanged
+      file: ../src/MobiusOracle.ts
+

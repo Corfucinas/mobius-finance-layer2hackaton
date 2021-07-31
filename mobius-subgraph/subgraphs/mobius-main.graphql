@@ -1,0 +1,77 @@
+type TransactionCountsEntity @entity {
+" Transaction counts every 30 minutes "
+  id: ID!
+  count: BigInt!
+}
+
+type TxCountsDailyEntity @entity {
+" Transaction counts every day "
+  id: ID!
+  count: BigInt!
+}
+
+type VolumeEntity @entity {
+" trading Volume every 30 minutes "
+  id: ID!
+  amount: BigInt!
+}
+
+type VolumeDailyEntity @entity {
+" trading Volume every day "
+  id: ID!
+  amount: BigInt!
+}
+
+type VolumeOfSynthEntity @entity {
+" trading Volume of synth every 30 minutes "
+  id: ID!
+  synth: String!
+  time: BigInt!
+  amount: BigInt!
+  fee: BigInt!
+}
+
+type FeeEntity @entity {
+" total trading fee for synth "
+  id: ID!
+  tradeFee: BigInt!
+}
+
+type TradingAmountEntity @entity {
+" trading Volume of synth every 30 minutes in reward trading pool "
+  id: ID!
+  pid: BigInt!
+  time: BigInt!
+  amount: BigInt!
+}
+
+type OperationEntity @entity {
+" user operations " 
+  id: ID!
+  addr: String!
+  op: String!
+  type: String!
+  value: BigInt!
+  time: BigInt!
+}
+
+type StakesAndDebtsEntity @entity {
+" collateral and debt info for every user "
+  id: ID!
+  addr: String!
+  stake: String!
+  stakeAmt: BigInt!
+  debt: String!
+  debtAmt: BigInt!
+  ratio: BigInt!
+  time: BigInt!
+}
+
+type PriceEntity @entity {
+" Price of token "
+  id: ID!
+  name: String!
+  time: BigInt!
+  price: BigInt!
+  marketCap: BigInt!
+}

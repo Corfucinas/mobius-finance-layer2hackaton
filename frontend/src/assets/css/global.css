@@ -1,0 +1,200 @@
+.but {
+    cursor: pointer;
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+    text-align: center;
+    background: #7D6EF4;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 24px;
+    font-family: DINPro-Bold, DINPro;
+    font-weight: bold;
+    margin-top: 40px;
+    border: none;
+    opacity: 1;
+    box-shadow: 0px 4px 8px 0px rgba(85, 57, 209, 0.57);
+}
+
+.but:hover {
+    background: #968BF0;
+    color: #fff;
+    box-shadow: 0px 4px 8px 0px rgba(85, 57, 209, 0.57);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+.disableBut {
+    cursor: pointer;
+    height: 48px;
+    line-height: 48px;
+    width: 100%;
+    text-align: center;
+    background-color: #D2CCFF !important;
+    border-radius: 4px;
+    color: #fff !important;
+    font-size: 24px;
+    font-family: DINPro-Bold, DINPro;
+    font-weight: bold;
+    margin-top: 40px;
+    border: none;
+}
+
+.connect-but {
+    background: #e5e5e5;
+    border: none;
+    color: #7D6EF4;
+}
+
+.ant-btn:hover, .ant-btn:focus, .ant-btn:active, .ant-btn.active {
+    background: #968BF0;
+    color: #fff;
+}
+
+.ant-btn:hover, .ant-btn:focus {
+    color: #fff;
+    background: #968BF0;
+}
+
+.has-error .ant-input-number-focused, .has-error .ant-time-picker-input-focused, .has-error .ant-input-number:focus, .has-error .ant-time-picker-input:focus {
+    box-shadow: none;
+}
+
+/*统计数字样式*/
+.ant-statistic {
+    display: inline-block;
+    line-height: inherit;
+}
+
+.ant-statistic-content {
+    font-size: 16px;
+    font-weight: bold;
+    color: #37373C;
+    font-family: DINPro-Medium, DINPro;
+}
+
+.ant-statistic-content-value-decimal {
+    font-size: 16px;
+    font-family: DINPro-Medium, DINPro;
+}
+
+.ant-statistic-content-value-int {
+    font-family: DINPro-Medium, DINPro;
+}
+
+.ant-statistic-content-suffix {
+    font-size: 16px;
+    font-family: DINPro-Medium, DINPro;
+}
+
+/*进度条样式*/
+.ant-slider-track {
+    background: #7F4BE0;
+    height: 12px;
+}
+
+.ant-slider:hover .ant-slider-track {
+    background: #7F4BE0;
+}
+
+.ant-slider-rail {
+    height: 12px;
+    border-radius: 6px 0px 0px 6px;
+}
+
+.ant-slider-handle {
+    height: 20px;
+    width: 20px;
+}
+
+.ant-spin-dot-item {
+    background-color: #3C367C;
+}
+
+/*modal 弹框样式*/
+.ant-modal {
+    min-width: 400px;
+}
+
+.ant-modal-mask {
+    z-index: 9999;
+}
+
+.ant-modal-wrap {
+    z-index: 9999;
+}
+
+/*input 输入框样式*/
+.ant-input-number {
+    border-right: none;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.ant-input-number-input {
+    background: #F6F7FB;
+    color: #37373C;
+    font-size: 24px;
+    font-weight: bold;
+    height: 35px;
+    font-family: DINPro-Medium, DINPro;
+}
+
+.ant-input-number:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.ant-input-number-focused {
+    border: 1px solid #d9d9d9;
+    border-right: none;
+    border: none;
+}
+
+.ant-input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.ant-input-number{
+    box-shadow: none;
+}
+
+.ant-input-number-handler-wrap{
+    display: none;
+}
+
+.ant-input-number-input-wrap{
+    height: 100%;
+}
+
+input{
+    height: 100%;
+}
+
+.ant-modal-content {
+    border-radius: 20px;
+}
+
+.ant-modal-body {
+    padding: 0 20px 20px 20px;
+}
+
+.ant-modal-header {
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+}
+
+.ant-modal-title {
+    font-size: 22px;
+}
+
+.ant-modal-close .ant-modal-close-x .anticon{
+    font-size: 22px;
+    font-weight: bold;
+    color: #6A6972;
+}
